@@ -81,6 +81,7 @@
     <ClInclude Include="Color.h" />
     <ClInclude Include="Inspections.h" />
     <ClInclude Include="IntroduceVariable.h" />
+    <ClInclude Include="Macro.h" />
     <ClInclude Include="Rename.h" />
     <ClInclude Include="SearchAndNav.h" />
     <ClInclude Include="stdafx.h" />

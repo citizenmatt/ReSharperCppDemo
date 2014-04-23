@@ -56,10 +56,6 @@ public:
   {
     switch (color)
     {
-    case Color::red: break;
-    case Color::green: break;
-    case Color::blue: break;
-    default: break;
       // alt+enter to generate cases
       // now delete one of the Color cases and alt+enter again to generate missing case
     }
@@ -67,7 +63,26 @@ public:
 
   void HelloDevelopers()
   {
-    // endl is not identified: explain popup and do alt+enter to add std:: prefix
-    std::cout << "Hello, developers!" << endl;
+    // add << endl at the end: explain popup and do alt+enter to add std:: prefix
+    std::cout << "Hello, developers!";
   }
 };
+
+template <int N>
+struct Factorial 
+{
+    enum { value = N * Factorial<N - 1>::value };
+};
+
+template <>
+struct Factorial<0> 
+{
+    enum { value = 1 };
+};
+
+void foo()
+{
+  // hover the mouse over ::value to show evaluated values
+  int x = Factorial<4>::value;
+  int y = Factorial<0>::value;
+}
